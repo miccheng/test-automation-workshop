@@ -1,0 +1,17 @@
+{
+  "name": "NodeJS Dev",
+  "image": "mcr.microsoft.com/playwright:v1.46.1-jammy",
+  "forwardPorts": [
+    9323
+  ],
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-playwright.playwright",
+        "MS-vsliveshare.vsliveshare",
+        "humao.rest-client"
+      ]
+    }
+  }
+}
