@@ -1,12 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const ToDo = require('./models/todo');
+const cors = require('cors');
 
 // Initialize the app
 const app = express();
 const port = 3000;
 
 // Middleware to parse request body as JSON
+app.use(cors());
 app.use(bodyParser.json());
 
 // Create (POST) a new task
