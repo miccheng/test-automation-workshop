@@ -1,6 +1,6 @@
 {
   "name": "JavaScript Dev",
-  "image": "mcr.microsoft.com/playwright:v1.46.1-jammy",
+  "image": "mcr.microsoft.com/playwright:v1.47.2-noble",
   "forwardPorts": [
     9323,
     3000,
