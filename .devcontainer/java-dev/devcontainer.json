@@ -1,0 +1,25 @@
+{
+  "name": "Java Dev",
+  "image": "mcr.microsoft.com/playwright:v1.47.2-noble",
+  "forwardPorts": [
+    9323,
+    3000,
+    5173
+  ],
+  "features": {
+    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {},
+    "ghcr.io/devcontainers/features/java:1": {
+      "installGradle": true,
+      "installGroovy": true
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-playwright.playwright",
+        "MS-vsliveshare.vsliveshare",
+        "humao.rest-client"
+      ]
+    }
+  }
+}
