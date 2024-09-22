@@ -1,4 +1,4 @@
-package com.tddworkshops.repository;
+package com.tddworkshops.todolist.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
