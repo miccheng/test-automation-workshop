@@ -1,10 +1,7 @@
 package com.tddworkshops.todolist;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
@@ -20,31 +17,23 @@ class TodolistApplicationTests {
 	WebTestClient webTestClient;
 
 	@Test
-	@Order(1)
-	void context_loads() {
-	}
-
-	@Test
-	@Order(2)
-	void context_with_web_test_client() {
-		assertNotNull(webTestClient);
+	void test_create_todo() {
 		webTestClient.get()
 				.uri("/todos")
 				.exchange()
 				.expectStatus()
-				.isOk();
-	}
+				.isOk()
+				.expectBody()
+				.jsonPath("$.length()")
+				.isEqualTo("0");
 
-	@Test
-	@Order(3)
-	void test_create_todo() {
 		webTestClient.post()
 				.uri("/todos")
 				.contentType(MediaType.APPLICATION_JSON)
 				.bodyValue("{\"task\": \"New Task\"}")
 				.exchange()
 				.expectStatus()
-				.isCreated();
+				.isOk();
 
 		webTestClient.get()
 				.uri("/todos")
@@ -52,23 +41,18 @@ class TodolistApplicationTests {
 				.expectStatus()
 				.isOk()
 				.expectBody()
-				.jsonPath("_embedded.todos.length()")
+				.jsonPath("$.length()")
 				.isEqualTo("1")
-				.jsonPath("_embedded.todos[0].task")
+				.jsonPath("$.[0].task")
 				.isEqualTo("New Task");
-	}
 
-	// Test the edit Todo feature
-	@Test
-	@Order(4)
-	void test_edit_todo() {
-		webTestClient.put()
+				webTestClient.put()
 				.uri("/todos/1")
 				.contentType(MediaType.APPLICATION_JSON)
 				.bodyValue("{\"task\": \"Edited Task\", \"completed\": true}")
 				.exchange()
 				.expectStatus()
-				.isCreated();
+				.isOk();
 
 		// Validate the updated value
 		webTestClient.get()
@@ -81,17 +65,12 @@ class TodolistApplicationTests {
 				.isEqualTo("Edited Task")
 				.jsonPath("completed")
 				.isEqualTo("true");
-	}
 
-	// Test the delete Todo feature
-	@Test
-	@Order(5)
-	void test_delete_todo() {
-		webTestClient.delete()
+				webTestClient.delete()
 				.uri("/todos/1")
 				.exchange()
 				.expectStatus()
-				.isOk();
+				.isNoContent();
 
 		// Validate the deleted value
 		webTestClient.get()
