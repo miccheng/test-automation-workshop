@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/todos")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TodoController {
 
     @Autowired
