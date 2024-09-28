@@ -1,7 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
-const testHost = 'http://localhost:5173/';
+const testHost = '/';
 
 const addItem = async (page, item) => {
   await page.fill('input', item);
