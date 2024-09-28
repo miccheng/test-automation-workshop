@@ -8,7 +8,8 @@
   ],
   "postCreateCommand": "cd todo-backend/todo-app-js && npm install && cd ../../todo-frontend && npm install",
   "features": {
-    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {}
+    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   },
   "customizations": {
     "vscode": {

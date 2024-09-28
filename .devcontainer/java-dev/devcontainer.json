@@ -12,7 +12,8 @@
     "ghcr.io/devcontainers/features/java:1": {
       "installGradle": true,
       "installGroovy": true
-    }
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   },
   "customizations": {
     "vscode": {
