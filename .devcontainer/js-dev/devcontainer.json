@@ -18,7 +18,8 @@
         "MS-vsliveshare.vsliveshare",
         "humao.rest-client",
         "Vue.volar",
-        "oderwat.indent-rainbow"
+        "oderwat.indent-rainbow",
+        "vitest.explorer"
       ]
     }
   }
