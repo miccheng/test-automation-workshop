@@ -28,6 +28,9 @@ import axios from 'axios';
 import TodoItem from './components/TodoItem.vue';
 import TodoForm from './components/TodoForm.vue';
 
+const apiHost = 'http://localhost:3000'
+// const apiHost = 'https://fictional-dollop-9qjvp9qxphxqqw.app.github.dev:3000'
+
 export default {
   components: {
     TodoItem,
@@ -48,7 +51,7 @@ export default {
     async fetchTodos() {
       this.loading = true;
       try {
-        const response = await axios.get('http://localhost:3000/todos');
+        const response = await axios.get(`${apiHost}/todos`);
         this.todos = response.data;
       } catch (error) {
         console.error("Error fetching todos:", error);
@@ -58,7 +61,7 @@ export default {
     },
     async addTask(task) {
       try {
-        const response = await axios.post('http://localhost:3000/todos', task);
+        const response = await axios.post(`${apiHost}/todos`, task);
         this.todos.push(response.data);
       } catch (error) {
         console.error("Error adding task:", error);
@@ -66,7 +69,7 @@ export default {
     },
     async updateTask(updatedTask) {
       try {
-        const response = await axios.put(`http://localhost:3000/todos/${updatedTask.id}`, updatedTask);
+        const response = await axios.put(`${apiHost}/todos/${updatedTask.id}`, updatedTask);
         const index = this.todos.findIndex(todo => todo.id === updatedTask.id);
         this.todos[index] = response.data;
         this.cancelEdit();
@@ -76,7 +79,7 @@ export default {
     },
     async deleteTask(id) {
       try {
-        await axios.delete(`http://localhost:3000/todos/${id}`);
+        await axios.delete(`${apiHost}/todos/${id}`);
         this.todos = this.todos.filter(todo => todo.id !== id);
       } catch (error) {
         console.error("Error deleting task:", error);
@@ -86,7 +89,7 @@ export default {
       try {
         const todo = this.todos.find(todo => todo.id === id);
         todo.completed = completed;
-        await axios.put(`http://localhost:3000/todos/${id}`, todo);
+        await axios.put(`${apiHost}/todos/${id}`, todo);
       } catch (error) {
         console.error("Error toggling complete:", error);
       }
