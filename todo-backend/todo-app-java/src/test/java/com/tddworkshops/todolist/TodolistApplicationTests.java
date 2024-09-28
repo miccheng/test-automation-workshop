@@ -46,7 +46,7 @@ class TodolistApplicationTests {
 				.jsonPath("$.[0].task")
 				.isEqualTo("New Task");
 
-				webTestClient.put()
+		webTestClient.put()
 				.uri("/todos/1")
 				.contentType(MediaType.APPLICATION_JSON)
 				.bodyValue("{\"task\": \"Edited Task\", \"completed\": true}")
@@ -66,7 +66,7 @@ class TodolistApplicationTests {
 				.jsonPath("completed")
 				.isEqualTo("true");
 
-				webTestClient.delete()
+		webTestClient.delete()
 				.uri("/todos/1")
 				.exchange()
 				.expectStatus()

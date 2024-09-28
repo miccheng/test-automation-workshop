@@ -12,22 +12,22 @@ import java.util.List;
 @DataJpaTest
 public class TodoRepositoryTest {
     @Autowired
-    private TodoRepository toDoRepository;
+    private TodoRepository todoRepository;
 
     @Test
-    void whenFindAll_thenReturnAllToDos() {
+    void whenFindAll_thenReturnAllTodos() {
         // Arrange
         Todo task1 = new Todo(null, "Task 1", false);
         Todo task2 = new Todo(null, "Task 2", true);
-        toDoRepository.save(task1);
-        toDoRepository.save(task2);
+        todoRepository.save(task1);
+        todoRepository.save(task2);
 
         // Act
-        List<Todo> toDoList = toDoRepository.findAll();
+        List<Todo> todoList = todoRepository.findAll();
 
         // Assert
-        assertThat(toDoList).hasSize(2);
-        assertThat(toDoList.get(0).getTask()).isEqualTo("Task 1");
-        assertThat(toDoList.get(1).getTask()).isEqualTo("Task 2");
+        assertThat(todoList).hasSize(2);
+        assertThat(todoList.get(0).getTask()).isEqualTo("Task 1");
+        assertThat(todoList.get(1).getTask()).isEqualTo("Task 2");
     }
 }

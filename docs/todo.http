@@ -16,13 +16,13 @@ content-type: application/json
 
 ###
 # Update To Do Item
-@task_id=3
+@task_id=1
 
 PUT {{host}}/todos/{{task_id}} HTTP/1.1
 content-type: application/json
 
 {
-    "task": "help Anarane",
+    "task": "help Jane",
     "completed": true
 }
 
