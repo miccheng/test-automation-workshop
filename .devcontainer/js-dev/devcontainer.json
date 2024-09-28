@@ -1,6 +1,6 @@
 {
   "name": "JavaScript Dev",
-  "image": "mcr.microsoft.com/playwright:v1.47.2-noble",
+  "image": "mcr.microsoft.com/playwright:v1.47.2-jammy",
   "forwardPorts": [
     9323,
     3000,
@@ -16,7 +16,8 @@
         "ms-playwright.playwright",
         "MS-vsliveshare.vsliveshare",
         "humao.rest-client",
-        "Vue.volar"
+        "Vue.volar",
+        "oderwat.indent-rainbow"
       ]
     }
   }
