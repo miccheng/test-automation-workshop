@@ -9,16 +9,16 @@ const addItem = async (page, item) => {
 }
 
 const removeItem = async (page) => {
-  await page.getByRole('button', { name: /Delete/i }).click();
+  const itemsToDelete = await page.getByRole('button', { name: /Delete/i })
+
+  if (await itemsToDelete.count() > 0) {
+    for (const btn of await itemsToDelete.all())
+      await btn.click();
+  }
 }
 
 test.afterEach(async ({ page }) => {
-  const locator = page.locator('.todo-item');
-
-  if (await locator.isVisible()) {
-    await removeItem(page);
-    await expect(locator).not.toBeVisible();
-  }
+  await removeItem(page);
 });
 
 test('has title', async ({ page }) => {
@@ -86,4 +86,23 @@ test('mark todo item as done', async ({ page }) => {
   // Verify the item is marked as done
   locator = page.locator('.todo-item span');
   await expect(locator).toHaveClass('completed');
+});
+
+// Write test to add multiple todo items
+test('add multiple todo items', async ({ page }) => {
+  await page.goto(testHost);
+
+  // Add a todo item
+  await addItem(page, 'Buy milk');
+
+  // Verify the item is added
+  let locator = page.locator('.todo-item:nth-child(1)');
+  await expect(locator).toHaveText(/Buy milk/);
+
+  // Add another todo item
+  await addItem(page, 'Buy eggs');
+
+  // Verify the item is added
+  locator = page.locator('.todo-item:nth-child(2)');
+  await expect(locator).toHaveText(/Buy eggs/);
 });
