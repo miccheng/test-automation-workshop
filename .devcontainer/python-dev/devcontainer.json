@@ -1,0 +1,27 @@
+{
+  "name": "Python Dev",
+  "image": "mcr.microsoft.com/playwright:v1.47.2-jammy",
+  "forwardPorts": [
+    9323,
+    3000,
+    5173
+  ],
+  "postCreateCommand": "cd todo-backend/todo-app-js && npm install && cd ../../todo-frontend && npm install",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-playwright.playwright",
+        "MS-vsliveshare.vsliveshare",
+        "humao.rest-client",
+        "Vue.volar",
+        "oderwat.indent-rainbow",
+        "vitest.explorer"
+      ]
+    }
+  }
+}
