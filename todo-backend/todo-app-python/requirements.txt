@@ -1,0 +1,17 @@
+# annotated-types==0.7.0
+# anyio==4.6.0
+# click==8.1.7
+# exceptiongroup==1.2.2
+# greenlet==3.1.1
+# h11==0.14.0
+# idna==3.10
+# sniffio==1.3.1
+# starlette==0.38.6
+# typing_extensions==4.12.2
+
+# Main packages needed by Todo App
+uvicorn==0.31.0
+SQLAlchemy==2.0.35
+pydantic==2.9.2
+pydantic_core==2.23.4
+fastapi==0.115.0
