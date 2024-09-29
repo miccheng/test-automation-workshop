@@ -2,56 +2,66 @@ package com.tddworkshops.todolist.controller;
 
 import com.tddworkshops.todolist.entity.Todo;
 import com.tddworkshops.todolist.service.TodoService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import lombok.RequiredArgsConstructor;
+
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/todos")
+@RequestMapping(path = "/todos", produces = MediaType.APPLICATION_JSON_VALUE)
 @CrossOrigin(origins = "*", allowedHeaders = "*")
+@RequiredArgsConstructor
+@Validated
 public class TodoController {
+    private final TodoService todoService;
 
-    @Autowired
-    private TodoService toDoService;
-
-    // Get all to-do items
+    // Get all todo items
     @GetMapping
-    public List<Todo> getAllToDos() {
-        return toDoService.getAllToDos();
+    public List<Todo> getAllTodos() {
+        return todoService.getAllTodos();
     }
 
-    // Get a to-do item by ID
+    // Get a todo item by ID
     @GetMapping("/{id}")
-    public ResponseEntity<Todo> getToDoById(@PathVariable Long id) {
-        Todo toDo = toDoService.getToDoById(id);
-        if (toDo != null) {
-            return ResponseEntity.ok(toDo);
+    public ResponseEntity<Todo> getTodoById(@PathVariable @NotNull Long id) {
+        Optional<Todo> todo = todoService.getTodoById(id);
+
+        if (todo.isPresent()) {
+            return ResponseEntity.ok(todo.get());
+        } else {
+            return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.notFound().build();
     }
 
-    // Create a new to-do item
+    // Create a new todo item
     @PostMapping
-    public Todo createToDo(@RequestBody Todo toDo) {
-        return toDoService.createToDo(toDo);
+    public Todo createTodo(@RequestBody @Valid Todo todo) {
+        return todoService.createTodo(todo);
     }
 
-    // Update an existing to-do item
+    // Update an existing todo item
     @PutMapping("/{id}")
-    public ResponseEntity<Todo> updateToDo(@PathVariable Long id, @RequestBody Todo toDoDetails) {
-        Todo updatedToDo = toDoService.updateToDo(id, toDoDetails);
-        if (updatedToDo != null) {
-            return ResponseEntity.ok(updatedToDo);
+    public ResponseEntity<Todo> updateTodo(@PathVariable @NotNull Long id, @RequestBody @Valid Todo todoDetails) {
+        Optional<Todo> updatedTodo = todoService.updateTodo(id, todoDetails);
+
+        if (updatedTodo.isPresent()) {
+            return ResponseEntity.ok(updatedTodo.get());
+        } else {
+            return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.notFound().build();
     }
 
-    // Delete a to-do item by ID
+    // Delete a todo item by ID
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteToDoById(@PathVariable Long id) {
-        toDoService.deleteToDoById(id);
+    public ResponseEntity<Void> deleteTodoById(@PathVariable @NotNull Long id) {
+        todoService.deleteTodoById(id);
         return ResponseEntity.noContent().build();
     }
 }

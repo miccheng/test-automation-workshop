@@ -2,40 +2,38 @@ package com.tddworkshops.todolist.service;
 
 import com.tddworkshops.todolist.entity.Todo;
 import com.tddworkshops.todolist.repository.TodoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
+import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class TodoService {
+    private final TodoRepository todoRepository;
 
-    @Autowired
-    private TodoRepository toDoRepository;
-
-    public List<Todo> getAllToDos() {
-        return toDoRepository.findAll();
+    public List<Todo> getAllTodos() {
+        return todoRepository.findAll();
     }
 
-    public Todo getToDoById(Long id) {
-        return toDoRepository.findById(id).orElse(null);
+    public Optional<Todo> getTodoById(Long id) {
+        return todoRepository.findById(id);
     }
 
-    public Todo createToDo(Todo toDo) {
-        return toDoRepository.save(toDo);
+    public Todo createTodo(Todo todo) {
+        return todoRepository.save(todo);
     }
 
-    public Todo updateToDo(Long id, Todo toDoDetails) {
-        Todo toDo = getToDoById(id);
-        if (toDo != null) {
-            toDo.setTask(toDoDetails.getTask());
-            toDo.setCompleted(toDoDetails.isCompleted());
-            return toDoRepository.save(toDo);
+    public Optional<Todo> updateTodo(Long id, Todo todoDetails) {
+        if (getTodoById(id).isPresent()) {
+            todoDetails.setId(id);
+            return Optional.of(todoRepository.save(todoDetails));
+        } else {
+            return Optional.empty();
         }
-        return null;
     }
 
-    public void deleteToDoById(Long id) {
-        toDoRepository.deleteById(id);
+    public void deleteTodoById(Long id) {
+        todoRepository.deleteById(id);
     }
 }
