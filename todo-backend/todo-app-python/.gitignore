@@ -1,2 +1,4 @@
 __pycache__/
 todos.db
+test_todos.db
+venv
