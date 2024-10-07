@@ -13,5 +13,8 @@
     {
       "path": "docs"
     }
-  ]
+  ],
+  "settings": {
+    "java.compile.nullAnalysis.mode": "automatic"
+  }
 }

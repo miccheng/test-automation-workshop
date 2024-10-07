@@ -6,7 +6,7 @@
     3000,
     5173
   ],
-  "postCreateCommand": "cd todo-frontend && npm install",
+  "postCreateCommand": "cd todo-frontend && npm install && cd ../todo-backend/todo-app-java && ./gradlew build && cd ../../e2e/java && ./gradlew jar",
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
       "version": "21.0.4",
