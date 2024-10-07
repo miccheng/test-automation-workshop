@@ -8,13 +8,11 @@
   ],
   "postCreateCommand": "cd todo-frontend && npm install",
   "features": {
-    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {},
     "ghcr.io/devcontainers/features/java:1": {
       "version": "21.0.4",
       "installGradle": true,
       "installGroovy": true
-    },
-    "ghcr.io/devcontainers/features/github-cli:1": {}
+    }
   },
   "customizations": {
     "vscode": {
@@ -24,7 +22,8 @@
         "humao.rest-client",
         "Vue.volar",
         "oderwat.indent-rainbow",
-        "vitest.explorer"
+        "vitest.explorer",
+        "vmware.vscode-boot-dev-pack"
       ]
     }
   }

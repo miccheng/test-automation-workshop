@@ -9,8 +9,7 @@
   "postCreateCommand": "cd todo-backend/todo-app-python && make install-dependencies && cd ../../todo-frontend && npm install",
   "features": {
     "ghcr.io/devcontainers/features/python:1": {},
-    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {}
+    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {}
   },
   "customizations": {
     "vscode": {
