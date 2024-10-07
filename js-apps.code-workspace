@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": "todo-frontend"
+    },
+    {
+      "path": "todo-backend/todo-app-js"
+    },
+    {
+      "name": "End-to-End Tests",
+      "path": "e2e/js"
+    },
+    {
+      "path": "docs"
+    }
+  ]
+}
