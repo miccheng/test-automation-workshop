@@ -8,7 +8,7 @@ public class PlaywrightOptionsFactory implements OptionsFactory {
   @Override
   public Options getOptions() {
     return new Options()
-        .setHeadless(false)
+        .setHeadless(true)
         .setBaseUrl("http://localhost:5173");
   }
 }
