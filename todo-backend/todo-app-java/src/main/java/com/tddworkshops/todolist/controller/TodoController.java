@@ -30,7 +30,7 @@ public class TodoController {
 
     // Get a todo item by ID
     @GetMapping("/{id}")
-    public ResponseEntity<Todo> getTodoById(@PathVariable @NotNull Long id) {
+    public ResponseEntity<Todo> getTodoById(@PathVariable("id") @NotNull Long id) {
         Optional<Todo> todo = todoService.getTodoById(id);
 
         if (todo.isPresent()) {
@@ -48,7 +48,7 @@ public class TodoController {
 
     // Update an existing todo item
     @PutMapping("/{id}")
-    public ResponseEntity<Todo> updateTodo(@PathVariable @NotNull Long id, @RequestBody @Valid Todo todoDetails) {
+    public ResponseEntity<Todo> updateTodo(@PathVariable("id") @NotNull Long id, @RequestBody @Valid Todo todoDetails) {
         Optional<Todo> updatedTodo = todoService.updateTodo(id, todoDetails);
 
         if (updatedTodo.isPresent()) {
@@ -60,7 +60,7 @@ public class TodoController {
 
     // Delete a todo item by ID
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTodoById(@PathVariable @NotNull Long id) {
+    public ResponseEntity<Void> deleteTodoById(@PathVariable("id") @NotNull Long id) {
         todoService.deleteTodoById(id);
         return ResponseEntity.noContent().build();
     }
