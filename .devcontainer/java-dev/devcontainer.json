@@ -6,7 +6,7 @@
     3000,
     5173
   ],
-  "postCreateCommand": "pushd ./todo-frontend && npm install && popd",
+  "postCreateCommand": "cd ./todo-frontend && npm install",
   "customizations": {
     "vscode": {
       "extensions": [
