@@ -1,4 +1,4 @@
-## Exercise 2: Start a Codespace
+# Exercise 2: Start a Codespace
 
 1. In your forked repository page, click on **"Code"**, click on the elipsis (3 dots) button and select **"New with Options"**.
 

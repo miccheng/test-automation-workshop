@@ -1,4 +1,4 @@
-## Exercise 3: Open your Code Workspace
+# Exercise 3: Open your Code Workspace
 
 1. Open your workspace
 
