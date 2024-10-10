@@ -1,9 +1,11 @@
 {
   "folders": [
     {
+      "name": "Frontend App",
       "path": "todo-frontend"
     },
     {
+      "name": "Backend App",
       "path": "todo-backend/todo-app-js"
     },
     {
