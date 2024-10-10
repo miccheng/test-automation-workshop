@@ -1,19 +1,12 @@
 {
   "name": "Java Dev",
-  "image": "mcr.microsoft.com/playwright:v1.47.2-jammy",
+  "image": "ghcr.io/tdd-workshops/devcontainer-java",
   "forwardPorts": [
     9323,
     3000,
     5173
   ],
   "postCreateCommand": "cd todo-frontend && npm install && cd ../todo-backend/todo-app-java && ./gradlew build && cd ../../e2e/java && ./gradlew jar",
-  "features": {
-    "ghcr.io/devcontainers/features/java:1": {
-      "version": "21.0.4-ms",
-      "installGradle": true,
-      "installGroovy": true
-    }
-  },
   "customizations": {
     "vscode": {
       "extensions": [

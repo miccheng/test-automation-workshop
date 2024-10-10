@@ -1,16 +1,12 @@
 {
   "name": "Python Dev",
-  "image": "mcr.microsoft.com/playwright:v1.47.2-jammy",
+  "image": "ghcr.io/tdd-workshops/devcontainer-python",
   "forwardPorts": [
     9323,
     3000,
     5173
   ],
   "postCreateCommand": "cd todo-backend/todo-app-python && make install-dependencies && cd ../../todo-frontend && npm install",
-  "features": {
-    "ghcr.io/devcontainers/features/python:1": {},
-    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {}
-  },
   "customizations": {
     "vscode": {
       "extensions": [
