@@ -6,6 +6,7 @@ import com.microsoft.playwright.options.AriaRole;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import com.microsoft.playwright.junit.UsePlaywright;
 
@@ -25,6 +26,7 @@ class TodoAppTest {
   }
 
   @Test
+  @Order(1)
   void has_title(Page page) {
     page.navigate(TEST_HOST);
     var locator = page.locator("h1");
@@ -32,6 +34,7 @@ class TodoAppTest {
   }
 
   @Test
+  @Order(2)
   void add_and_remove_todo_item(Page page) {
     page.navigate(TEST_HOST);
     addItem(page, "Buy milk");
@@ -43,6 +46,7 @@ class TodoAppTest {
   }
 
   @Test
+  @Order(3)
   void edit_todo_item(Page page) {
     page.navigate(TEST_HOST);
     addItem(page, "Buy milk");
@@ -57,6 +61,7 @@ class TodoAppTest {
   }
 
   @Test
+  @Order(4)
   void mark_todo_item_as_done(Page page) {
     page.navigate(TEST_HOST);
     addItem(page, "Buy milk");
@@ -68,6 +73,7 @@ class TodoAppTest {
   }
 
   @Test
+  @Order(5)
   void add_multiple_todo_items(Page page) {
     page.navigate(TEST_HOST);
     addItem(page, "Buy milk");
