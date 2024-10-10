@@ -1,4 +1,4 @@
-# Running the project in GitHub Codespaces
+# Hands-On Lab Exercises
 
 - [Exercise 1: Fork the Workshop Repository](./exercises/exercise1.md)
 - [Exercise 2: Start a Codespace](./exercises/exercise2.md)
