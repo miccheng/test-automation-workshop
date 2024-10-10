@@ -10,7 +10,7 @@ Through this workshop, I aim to introduce the different testing tools used by mo
 
 We will cover the tests used in Unit Testing, Integration Testing and End-to-End testing.
 
-![Test Pyramid](./docs/test-pyramid.jpg)
+![Test Pyramid](./docs/images/test-pyramid.jpg)
 
 ## Sample Application
 
@@ -27,10 +27,9 @@ We will use a To Do List app to help illustrate the concepts. The To Do List app
 
 - Front end SPA (JS + VueJS) - Introduce web frontend testing (Port 3000)
 - Backend API - 3 flavors (Port 4000)
-	- ExpressJS (JavaScript)
-	- FastCGI (Python)
-	- Spring Boot (Java)
+  - ExpressJS (JavaScript)
+  - FastCGI (Python)
+  - Spring Boot (Java)
 - Playwright E2E - JS, Python & Java
 - DB - SQLite3
 - IDE - GitHub Codespace (Devcontainers)
-
