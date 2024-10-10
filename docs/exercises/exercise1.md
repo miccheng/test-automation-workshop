@@ -10,6 +10,5 @@
    ![Fork form](../images/fork_form.png)
 
 4. Click on **"Create fork"** to fork the repository to your organization / personal space.
-5. Next create your Codespace
 
 [Next Exercise](./exercise2.md)

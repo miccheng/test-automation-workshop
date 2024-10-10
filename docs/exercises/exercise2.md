@@ -26,4 +26,14 @@
 
    ![Codespace is now ready!](../images/codespace_editor_window.png)
 
+8. Make Port 3000 a public port
+
+   Select the "Exposed Ports" tab in the bottom panel:
+
+   ![Exposed Ports](../images/codespace_exposed_ports.png)
+
+   Right click on port `3000`, click on **"Port Visibility"** and change it to **"Public"**.
+
+   ![Change port visibility](../images/codespace_change_port_visibility.png)
+
 [Next Exercise](./exercise3.md)
