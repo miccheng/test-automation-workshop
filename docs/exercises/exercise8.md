@@ -1,22 +1,37 @@
-# Exercise 8: About the new feature
+# Exercise 8: Intro to the Playwright End to End Test
 
-## User Story
+## JavaScript
 
-```Gherkin
-As a User,
-When I have added multiple Tasks to the To Do List,
-And I have marked some Task as "Done",
-Then the "Clear Completed" button should be enabled.
+### Running the End to End Test
 
-When I click on "Clear Completed",
-Then I the "Done" Tasks should disappear from the To Do list.
-```
+#### Using the [Test Explorer](https://code.visualstudio.com/docs/editor/testing#_automatic-test-discovery-in-test-explorer).
 
-## Technical Breakdown
+1. Click on the **"Testing"** icon on the left sidebar.
 
-- [ ] `AC-1`: **Backend** API endpoint (`POST /todos/clear-completed`) to clear completed To Do Tasks.
-- [ ] `AC-2`: **"Clear Completed" button** in the **front-end** that is only enabled when there are some Tasks that are marked a "Done".
-- [ ] `AC-3`: When we click on the **"Clear Completed" button**, an API call should be triggered to the Backend API (`POST /todos/clear-completed`) in `AC-1` above.
-- [ ] `AC-4`: Update the UI with the updated To Do List.
+    ![Testing icon](../images/vscode_testing_sidebar.png)
+
+2. Open up all the tests in `Playwright` > `js` > `tests`
+
+    ![E2E Tests](../images/vscode_test_explorer_e2e_tests.png)
+
+3. On the row with `js` label, click on the **"Play"** button to run the unit tests.
+
+    ![Run the End to End tests](../images/vscode_test_explorer_play_e2e_tests.png)
+
+4. You should see a bunch of green ticks to signify that all the tests are passing.
+
+    ![Passing E2E tests](../images/vscode_vitest_passing_backend_tests.png)
+
+## Python
+
+### Running the End to End Test
+
+TODO
+
+## Java
+
+### Running the End to End Test
+
+TODO
 
 [Next Exercise](./exercise9.md)

@@ -1,4 +1,4 @@
-# Exercise 10: Updating the Frontend
+# Exercise 10: Updating the Backend
 
 ## JavaScript
 
