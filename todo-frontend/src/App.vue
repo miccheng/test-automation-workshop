@@ -29,7 +29,7 @@ import TodoItem from './components/TodoItem.vue';
 import TodoForm from './components/TodoForm.vue';
 
 const apiHost = 'http://localhost:3000'
-// const apiHost = 'https://fictional-dollop-9qjvp9qxphxqqw.app.github.dev:3000'
+// const apiHost = 'https://legendary-garbanzo-q9prwq64xh66j7-3000.app.github.dev'
 
 export default {
   components: {
