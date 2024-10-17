@@ -13,7 +13,7 @@
     <div v-if="loading">Loading...</div>
     <div v-else>
       <TodoItem 
-        v-for="todo in todos" 
+        v-for="todo in todos.items" 
         :key="todo.id" 
         :todo="todo" 
         @toggle-complete="toggleComplete"
@@ -39,7 +39,9 @@ export default {
   },
   data() {
     return {
-      todos: [],
+      todos: {
+        items: [],
+      },
       loading: true,
       editMode: false,
       taskToEdit: null,
@@ -53,7 +55,7 @@ export default {
       this.loading = true;
       try {
         const response = await axios.get(`${apiHost}/todos`);
-        this.todos = response.data;
+        this.todos.items = response.data;
       } catch (error) {
         console.error("Error fetching todos:", error);
       } finally {
@@ -63,7 +65,7 @@ export default {
     async addTask(task) {
       try {
         const response = await axios.post(`${apiHost}/todos`, task);
-        this.todos.push(response.data);
+        this.todos.items.push(response.data);
       } catch (error) {
         console.error("Error adding task:", error);
       }
@@ -71,8 +73,8 @@ export default {
     async updateTask(updatedTask) {
       try {
         const response = await axios.put(`${apiHost}/todos/${updatedTask.id}`, updatedTask);
-        const index = this.todos.findIndex(todo => todo.id === updatedTask.id);
-        this.todos[index] = response.data;
+        const index = this.todos.items.findIndex(todo => todo.id === updatedTask.id);
+        this.todos.items[index] = response.data;
         this.cancelEdit();
       } catch (error) {
         console.error("Error updating task:", error);
@@ -81,14 +83,14 @@ export default {
     async deleteTask(id) {
       try {
         await axios.delete(`${apiHost}/todos/${id}`);
-        this.todos = this.todos.filter(todo => todo.id !== id);
+        this.todos.items = this.todos.items.filter(todo => todo.id !== id);
       } catch (error) {
         console.error("Error deleting task:", error);
       }
     },
     async toggleComplete({ id, completed }) {
       try {
-        const todo = this.todos.find(todo => todo.id === id);
+        const todo = this.todos.items.find(todo => todo.id === id);
         todo.completed = completed;
         await axios.put(`${apiHost}/todos/${id}`, todo);
       } catch (error) {
