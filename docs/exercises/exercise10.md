@@ -1,6 +1,6 @@
 # Exercise 10: Updating the Backend
 
-Let's work on the first user story: 
+Let's work on the first user story:
 
 - [ ] `AC-1`: **Backend** API endpoint (`POST /todos/clear-completed`) to clear completed To Do Tasks.
 
