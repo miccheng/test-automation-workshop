@@ -3,7 +3,7 @@ import TodoActions from '../src/components/TodoActions.vue'
 import { describe, expect, it } from 'vitest'
 
 describe('TodoActions.vue', () => {
-  it('should hide clear completed button when not hasCompleted', () => {
+  it('should hide clear completed button when no To Do completed', () => {
     const wrapper = mount(TodoActions, {props: { hasCompleted: false }})
 
     expect(wrapper.find('.clearCompletedBtn').exists()).toBe(false)
