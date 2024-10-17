@@ -9,7 +9,7 @@ And I have marked some Task as "Done",
 Then the "Clear Completed" button should be enabled.
 
 When I click on "Clear Completed",
-Then I the "Done" Tasks should disappear from the To Do list.
+Then I should only see "Undone" Tasks on the To Do list.
 ```
 
 ## Technical Breakdown
