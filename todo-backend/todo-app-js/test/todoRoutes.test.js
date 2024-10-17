@@ -74,4 +74,21 @@ describe('Todo API Routes', () => {
     const remainingTodos = await Todo.findAll();
     expect(remainingTodos).toHaveLength(0);
   });
+
+  it('should clear completed tasks', async () => {
+    // Arrange
+    await Todo.create({ task: 'Done task 1', completed: true });
+    await Todo.create({ task: 'Done task 2', completed: true });
+    await Todo.create({ task: 'Procratinating task', completed: false });
+
+    // Act
+    await request(app)
+      .post(`/todos/clear-completed`)
+      .expect(200);
+
+    // Assert
+    const remainingTodos = await Todo.findAll();
+    expect(remainingTodos).toHaveLength(1);
+    expect(remainingTodos[0].task).toEqual('Procratinating task');
+  })
 });
