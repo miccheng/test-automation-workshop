@@ -15,7 +15,8 @@
         "humao.rest-client",
         "Vue.volar",
         "oderwat.indent-rainbow",
-        "vitest.explorer"
+        "vitest.explorer",
+        "esbenp.prettier-vscode"
       ]
     }
   }
