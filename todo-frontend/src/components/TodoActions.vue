@@ -16,3 +16,10 @@ export default {
   }
 }
 </script>
+
+<style>
+  button.clearCompletedBtn {
+    font-size: small;
+    background-color: goldenrod;
+  }
+</style>
