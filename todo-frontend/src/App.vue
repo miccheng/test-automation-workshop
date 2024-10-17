@@ -28,7 +28,8 @@ import axios from 'axios';
 import TodoItem from './components/TodoItem.vue';
 import TodoForm from './components/TodoForm.vue';
 
-const apiHost = 'http://localhost:3000'
+const viteApiHost = import.meta.env.VITE_API_HOST;
+const apiHost = viteApiHost && viteApiHost !== 'https://-3000.' ? viteApiHost : 'http://localhost:3000';
 // const apiHost = 'https://legendary-garbanzo-q9prwq64xh66j7-3000.app.github.dev'
 
 export default {
