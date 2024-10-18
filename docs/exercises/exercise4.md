@@ -4,28 +4,23 @@
 
 ## Side Bar
 
-![Side Bar](../images/vscode_sidebar.png)
+Your sidebar may look different depending on what VSCode extensions were installed with your dev container configuration.
 
-### Side Bar items for JS Dev:
+This is what the **"JavaScript Dev"** dev container configuration loads with:
 
-- Explorer
-- Search / Replace
-- Source Control
-- Run & Debug
-- Extensions
-- Testing
-- GitHub Pull Request
-- Live Share
+![Side Bar](../images/vscode_sidebar_with%20descriptions.png)
 
 ## Terminal Panel
 
+The [Terminal](https://www.technigo.io/explained/what-is-the-terminal) is like the **File Explorer** (Windows) / **Finder** (MacOS). Instead of clicking into folders and double-clicking to open a file, you type text commands to do so. We also refer to this as the **Console**, **Command Prompt** or **CLI**[^CLI].
+
 ![Terminal](../images/vscode_terminal.png)
 
-When you click on **"+"** to create a new Terminal, you can choose to start it in a project workspace.
+When you click on **"+"** to create a new Terminal session (like a new File Explorer/Finder window), you can choose to start it in a project workspace.
 
 ![New Terminal Option](../images/vscode_new_terminal.png)
 
-You can switch between Terminal sessions by selecting the process name at the panel on the right.
+You can switch between Terminal sessions by selecting the process name at the panel on the bottom right.
 
 ![Terminal Session List](../images/vscode_terminal_navigate.png)
 
@@ -41,7 +36,7 @@ Command | Task | Examples
 `ls -al` | Different formatting of the listing | `ls -al`
 `ls -al <folder_name>` | List the files in a different folder without navigating to it.  | `ls -al assets`
 
-## Explorer
+## Project Explorer
 
 ### Things to note:
 
@@ -50,3 +45,5 @@ Command | Task | Examples
 - Remember to save the file after making changes to it.
 
 [Next Exercise](./exercise5.md)
+
+[^CLI]: Command Line Interface
