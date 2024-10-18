@@ -30,7 +30,9 @@ We will use a To Do List app to help illustrate the concepts. The To Do List app
 ### Components
 
 - Frontend App
-  - The To Do List frontend is a web application built with [VueJS](https://vuejs.org).
+  - The To Do List frontend is a web application built with JavaScript.
+    - [VueJS](https://vuejs.org) for the SPA[^SPA] framework.
+    - [Vitest](https://vitest.dev) for the Unit Tests.
 - Backend App
   - The To Do List backend is a REST API server built in 3 programming languages.
   - JavaScript:
@@ -48,6 +50,9 @@ We will use a To Do List app to help illustrate the concepts. The To Do List app
     - [Spring Data JPA](https://spring.io/projects/spring-data-jpa) for the ORM[^ORM].
     - [Junit](https://junit.org/junit5) for the Unit Tests.
     - [H2](https://h2database.com) for the database.
+- End-to-End Tests
+  - This will automated a web browser and interact with the application like a normal user. This way, we have a repeatable and predictable way of verifying the features.
+    - [Playwright](https://playwright.dev/) for the E2E testing framework. We can write tests in [JavaScript](https://playwright.dev/docs/intro), [Python](https://playwright.dev/python/docs/intro) or [Java](https://playwright.dev/java/docs/intro).
 
 ## Hands-on Lab Exercises
 
@@ -69,3 +74,4 @@ We will be using [GitHub Codespace](https://docs.github.com/en/codespaces/overvi
 
 [^ORM]: Object Relational Mapping
 [^IDE]: Integrated Development Environment
+[^SPA]: Single Page Application
