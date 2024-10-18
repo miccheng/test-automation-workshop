@@ -4,6 +4,12 @@ Now that we have a working frontend and backend implementation of **"Clear Compl
 
 - [ ] `AC-4`: Update the UI with the updated To Do List.
 
+Skip to the portion for your preferred programming language:
+
+- [JavaScript](#javascript)
+- [Python](#python)
+- [Java](#java)
+
 ## JavaScript
 
 ### Update the End to End Test

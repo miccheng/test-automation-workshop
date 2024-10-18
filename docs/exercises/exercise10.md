@@ -4,6 +4,12 @@ Let's work on the first user story:
 
 - [ ] `AC-1`: **Backend** API endpoint (`POST /todos/clear-completed`) to clear completed To Do Tasks.
 
+Skip to the portion for your preferred programming language:
+
+- [JavaScript](#javascript)
+- [Python](#python)
+- [Java](#java)
+
 ## JavaScript
 
 ### Updating the Unit Test
