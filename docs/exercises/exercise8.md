@@ -8,6 +8,12 @@ We can write the E2E test files using [JavaScript](#javascript), [Python](#pytho
 
 > **Note:** Remember to delete all the To Do List Items before you run the E2E tests below. <br> (**Pro-Tip**: Try restarting the **"Backend App"**.)
 
+Skip to the portion for your preferred programming language:
+
+- [JavaScript](#javascript)
+- [Python](#python)
+- [Java](#java)
+
 ## JavaScript
 
 ### Running the End to End Test (via [Test Explorer](https://code.visualstudio.com/docs/editor/testing#_automatic-test-discovery-in-test-explorer))
