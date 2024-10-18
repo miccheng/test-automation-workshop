@@ -9,4 +9,4 @@ install-dependencies: ## Runs pip install from requirements.txt
 	pip install -r requirements.txt
 
 test: ## Runs the unit test
-	pytest
+	pytest --disable-warnings

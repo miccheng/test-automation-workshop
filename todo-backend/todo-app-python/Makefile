@@ -12,4 +12,4 @@ run: ## Starts the To Do List app
 	uvicorn app.main:app --host 0.0.0.0 --port 3000
 
 test: ## Runs the unit test
-	pytest
+	pytest --disable-warnings
