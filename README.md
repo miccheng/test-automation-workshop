@@ -35,23 +35,23 @@ We will use a To Do List app to help illustrate the concepts. The To Do List app
   - The To Do List backend is a REST API server built in 3 programming languages.
   - JavaScript:
     - [ExpressJS](https://expressjs.com) for the web framework.
-    - [Sequalize](https://sequelize.org) for the [^ORM].
+    - [Sequalize](https://sequelize.org) for the ORM[^ORM].
     - [Vitest](https://vitest.dev) for the Unit Tests.
     - [SQLite3](https://www.sqlite.org) for the database.
   - Python:
     - [FastAPI](https://fastapi.tiangolo.com) for the web framework.
-    - [SQLAlchemy](https://www.sqlalchemy.org) for the [^ORM].
+    - [SQLAlchemy](https://www.sqlalchemy.org) for the ORM[^ORM].
     - [Pytest](https://pytest.org) for the Unit Tests.
     - [SQLite3](https://www.sqlite.org) for the database.
   - Java:
     - [Spring Boot](https://spring.io) for the web framework.
-    - [Spring Data JPA](https://spring.io/projects/spring-data-jpa) for the [^ORM].
+    - [Spring Data JPA](https://spring.io/projects/spring-data-jpa) for the ORM[^ORM].
     - [Junit](https://junit.org/junit5) for the Unit Tests.
     - [H2](https://h2database.com) for the database.
 
 ## Hands-on Lab Exercises
 
-We will be using [GitHub Codespace](https://docs.github.com/en/codespaces/overview) (via [Devcontainers](https://code.visualstudio.com/docs/devcontainers/containers)) for these exercises. You can use this [^IDE] in the browser or in [Visual Studio Code](https://docs.github.com/en/codespaces/developing-in-a-codespace/using-github-codespaces-in-visual-studio-code) on your laptop.
+We will be using [GitHub Codespace](https://docs.github.com/en/codespaces/overview) (via [Devcontainers](https://code.visualstudio.com/docs/devcontainers/containers)) for these exercises. You can use this IDE[^IDE] in the browser or in [Visual Studio Code](https://docs.github.com/en/codespaces/developing-in-a-codespace/using-github-codespaces-in-visual-studio-code) on your laptop.
 
 - [Exercise 1: Fork the Workshop Repository](./docs/exercises/exercise1.md)
 - [Exercise 2: Start a Codespace](./docs/exercises/exercise2.md)
