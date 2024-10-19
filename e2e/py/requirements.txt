@@ -1,3 +1,4 @@
 pytest==8.3.3
 pytest-asyncio==0.24.0
 playwright==1.47.0
+pytest-playwright==0.5.2
