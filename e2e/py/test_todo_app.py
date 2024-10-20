@@ -1,4 +1,4 @@
-from playwright.sync_api import sync_playwright, expect
+from playwright.sync_api import expect
 import pytest
 
 testHost = 'http://localhost:5173'
@@ -20,6 +20,7 @@ def removeItem(page):
 def cleanup(page):
     yield
     removeItem(page)
+    page.wait_for_load_state('networkidle')
 
 
 def test_has_title(page):
