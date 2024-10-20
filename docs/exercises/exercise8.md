@@ -84,8 +84,26 @@ You can view & edit the E2E test files (files with `*.spec.js` extension) in `En
 
 ## Java
 
-### Running the End to End Test
+### Running the End to End Test (via [Test Explorer](https://code.visualstudio.com/docs/editor/testing#_automatic-test-discovery-in-test-explorer))
 
-TODO
+1. Click on the **"Testing"** icon on the left sidebar.
+
+    ![Testing icon](../images/vscode_testing_sidebar.png)
+
+2. Open up all the tests in `Java Test` > `todolist-java`
+
+    ![E2E Java Tests](../images/vscode_test_explorer_play_e2e_tests_java.png)
+
+3. On the row with `todolist-java` label, click on the **"Play"** button to run the E2E tests.
+
+4. You should see a bunch of green ticks to signify that all the tests are passing.
+
+    ![Passing E2E tests](../images/vscode_test_explorer_play_e2e_tests_java_passing.png)
+
+### Exploring the E2E tests
+
+You can view & edit the E2E test files in `End-to-End Tests` workspace. Under the `src` directory.
+
+![E2E Files](../images/e2e_java_explore_tests.png)
 
 [Next Exercise](./exercise9.md)
