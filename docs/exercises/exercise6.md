@@ -226,10 +226,78 @@ There are 2 ways to run the Unit Tests for the Frontend App:
 
 ### Starting the App
 
-TODO
+1. Open the **"Backend App"** workspace.
+
+2. Open this file: `src/main/java/com/tddworkshops/todolist/TodolistApplication.java`
+
+3. Click on **"Run"** at the top right hand corner.
+
+    ![Run Java app](../images/vscode_java_run_todolist.png)
+
+4. If you see this option, its due to Gradle importing all the depenedencies.
+
+    ![Opening Java Project](../images/vscode_java_opening_java_project.png)
+
+5. If you see these text in th your terminal, the **"Backend App"** is running now.
+
+    ![Spring ASCII art](../images/vscode_java_run_todolist_spring.png)
+
+    ![Spring Boot Running](../images/vscode_java_run_todolist_initialized.png)
+
+6. To access the app, open `docs/todo.http` file in the code editor (just click on it).
+
+    We will be using the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension to check the Backend REST API endpoints.
+
+    Click on the **"Send Request"** link to do the API call. The response & result will show up in a **"Response"** tab.
+
+    ![REST Client for todo.http](../images/backend_app_rest_client1.png)
+
+    Here are the API calls you can make:
+
+    - `GET /todos` - will return a JSON array of To Do Items.
+    - `POST /todos` - will create a new To Do Item.
+    - `PUT /todos/{{task_id}}` - will update an existing To Do Item with a `task_id`.
+    - `DELETE /todos/{{task_id}}` - will delete To Do Item with a `task_id`.
+
+7. To stop the app, click into the **"Stop button"**. This will stop the Backend App.
+
+    ![Stop button](../images/vscode_java_stop_app.png)
+
+    > **Note:** Stopping the app will clear all the To Do List items in the database.
+
 
 ### Running the Unit Test
 
-TODO
+1. Click on the **"Testing"** icon on the left sidebar.
+
+    ![Testing icon](../images/vscode_testing_sidebar.png)
+
+2. Open up all the tests in `Java Test` > `todolist-todo-app-java`
+
+    ![Backend Tests](../images/vscode_test_explorer_java.png)
+
+3. On the row with `todolist-todo-app-java` label, click on the **"Play"** button to run the unit tests.
+
+4. You should see a bunch of green ticks to signify that all the tests are passing.
+
+    ![Passing Backend App tests](../images/vscode_test_explorer_java_backend_passing.png)
+
+### Exploring the backend app code
+
+1. Click on the **"Explorer"** icon on the left sidebar.
+
+    ![Explorer icon](../images/vscode_project_explorer_sidebar.png)
+
+2. Click on **"Backend App"** to see all the folders under this workspace.
+
+    ![Java Project Explorer](../images/backend_java_project_explorer.png)
+
+3. The application code can be found in `main` directory.
+
+    - Can you figure out how we display the the To Do list?
+
+4. The test code can be found in `test` directory.
+
+    - Can you figure out what the test code mean?
 
 [Next Exercise](./exercise7.md)
