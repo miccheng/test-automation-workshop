@@ -3,6 +3,7 @@ package com.tddworkshops.todolist;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
+import com.microsoft.playwright.options.LoadState;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
@@ -23,7 +24,7 @@ class TodoAppTest {
   @AfterEach
   void teardown(Page page) {
     removeItem(page);
-    page.waitForLoadState(LoadState.NETWORKIDLE)
+    page.waitForLoadState(LoadState.NETWORKIDLE);
   }
 
   @Test
