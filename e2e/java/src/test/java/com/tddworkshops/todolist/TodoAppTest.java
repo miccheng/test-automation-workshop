@@ -23,6 +23,7 @@ class TodoAppTest {
   @AfterEach
   void teardown(Page page) {
     removeItem(page);
+    page.waitForLoadState(LoadState.NETWORKIDLE)
   }
 
   @Test

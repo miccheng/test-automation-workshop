@@ -19,6 +19,7 @@ const removeItem = async (page) => {
 
 test.afterEach(async ({ page }) => {
   await removeItem(page);
+  await page.waitForLoadState('networkidle')
 });
 
 test('has title', async ({ page }) => {
