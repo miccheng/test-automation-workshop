@@ -82,7 +82,7 @@ app.post('/todos/clear-completed', async (req, res) => {
             }
         });
 
-        res.json({ message: 'Completed Task Deleted' });
+        res.json({ message: 'Completed Tasks Deleted' });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

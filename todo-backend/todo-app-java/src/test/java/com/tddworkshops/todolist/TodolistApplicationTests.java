@@ -78,5 +78,24 @@ class TodolistApplicationTests {
 				.exchange()
 				.expectStatus()
 				.isNotFound();
+
+		// Create completed task
+		webTestClient.post()
+				.uri("/todos")
+				.contentType(MediaType.APPLICATION_JSON)
+				.bodyValue("{\"task\": \"Completed Task\", \"completed\": true}")
+				.exchange()
+				.expectStatus()
+				.isOk();
+
+		// Validate cleared completed tasks
+		webTestClient.post()
+				.uri("/todos/clear-completed")
+				.exchange()
+				.expectStatus()
+				.isOk()
+				.expectBody()
+				.jsonPath("message")
+				.isEqualTo("Completed Tasks Deleted");
 	}
 }
