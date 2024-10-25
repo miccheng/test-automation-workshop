@@ -1,6 +1,7 @@
 package com.tddworkshops.todolist.controller;
 
 import com.tddworkshops.todolist.entity.Todo;
+import com.tddworkshops.todolist.model.ClearCompletedResponseModel;
 import com.tddworkshops.todolist.service.TodoService;
 
 import jakarta.validation.Valid;
@@ -63,5 +64,12 @@ public class TodoController {
     public ResponseEntity<Void> deleteTodoById(@PathVariable("id") @NotNull Long id) {
         todoService.deleteTodoById(id);
         return ResponseEntity.noContent().build();
+    }
+
+    // Delete todo items that have been marked completed
+    @PostMapping("/clear-completed")
+    public ResponseEntity<ClearCompletedResponseModel> clearCompletedTodos() {
+        todoService.clearCompletedTodos();
+        return ResponseEntity.ok(new ClearCompletedResponseModel("Completed Tasks Deleted"));
     }
 }
