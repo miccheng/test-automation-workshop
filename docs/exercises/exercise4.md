@@ -12,7 +12,7 @@ This is what the **"JavaScript Dev"** dev container configuration loads with:
 
 ## Terminal Panel
 
-The [Terminal](https://www.technigo.io/explained/what-is-the-terminal) is like the **File Explorer** (Windows) / **Finder** (MacOS). Instead of clicking into folders and double-clicking to open a file, you type text commands to do so. We also refer to this as the **Console**, **Command Prompt** or **CLI**[^CLI].
+The [Terminal](https://www.technigo.io/explained/what-is-the-terminal) is like the **File Explorer** (Windows) / **Finder** (macOS). Instead of clicking into folders and double-clicking to open a file, you type text commands to do so. We also refer to this as the **Console**, **Command Prompt** or **CLI**[^CLI].
 
 ![Terminal](../images/vscode_terminal.png)
 
@@ -40,7 +40,7 @@ Command | Task | Examples
 
 ### Things to note:
 
-- To open a file, double click on the file name.
+- To open a file, double-click on the file name.
 - To preview a file without opening it, single click on the file name.
 - Remember to save the file after making changes to it.
 

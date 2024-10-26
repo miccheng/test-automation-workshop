@@ -57,7 +57,7 @@ Let's work on the next 2 user stories:
 
     - This will import the files needed for the test code.
     - We will also import the Vue component that we just created in step 2 (i.e. `TodoActions.vue`)
-    - And we created a place holder for the test function.
+    - And we created a placeholder for the test function.
 
 6. Let's add the first test (i.e. _**"it should hide clear completed button when no To Do completed"**_):
 
@@ -73,7 +73,7 @@ Let's work on the next 2 user stories:
 
     - We are testing that the button should not appear when there are no completed task.
     - For simplicity, we will compute the Boolean value (`true`/`false`) of whether there are completed tasks in the list outside of this component.
-    - In doing so, we isolate the component from the implementation detail of how how many completed tasks there are in the list.
+    - In doing so, we isolate the component from the implementation detail of how many completed tasks there are in the list.
     - All the component needs to know is "should I show the Clear Completed button?" via the `hasCompleted` property.
 
     You can try to run the test first. It should pass.

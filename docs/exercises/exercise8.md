@@ -1,4 +1,4 @@
-# Exercise 8: Intro to the Playwright End to End Test
+# Exercise 8: Intro to the Playwright End-to-End Test
 
 We will be using [Playwright](https://playwright.dev) to build our end-to-end (E2E) test. Playwright is a cross-browser, cross-platform and cross-language tool for creating end-to-end tests for your web browser.
 
@@ -16,7 +16,7 @@ Skip to the portion for your preferred programming language:
 
 ## JavaScript
 
-### Running the End to End Test (via [Test Explorer](https://code.visualstudio.com/docs/editor/testing#_automatic-test-discovery-in-test-explorer))
+### Running the End-to-End Test (via [Test Explorer](https://code.visualstudio.com/docs/editor/testing#_automatic-test-discovery-in-test-explorer))
 
 1. Click on the **"Testing"** icon on the left sidebar.
 
@@ -40,7 +40,7 @@ You can view & edit the E2E test files (files with `*.spec.js` extension) in `En
 
 ## Python
 
-### Running the End to End Test
+### Running the End-to-End Test
 
 1. Click on the **"Testing"** icon on the left sidebar to open the **"Test Explorer"**.
 
@@ -50,7 +50,7 @@ You can view & edit the E2E test files (files with `*.spec.js` extension) in `En
 
 2. We will need to configure the Python testing in VSCode.
 
-    Press `ctrl` + `shift` + `p` (windows) / `cmd` + `shift` + `p` (MacOS) to bring up the [Command Palette](https://code.visualstudio.com/api/ux-guidelines/command-palette).
+    Press `ctrl` + `shift` + `p` (windows) / `cmd` + `shift` + `p` (macOS) to bring up the [Command Palette](https://code.visualstudio.com/api/ux-guidelines/command-palette).
 
     Next, type: `pytest`
 
@@ -66,7 +66,7 @@ You can view & edit the E2E test files (files with `*.spec.js` extension) in `En
 
     ![Select test framework](../images/backend_app_python_configure_test_select_test_framework.png)
 
-5. Next select the **Root directory"** as the directory containing the tests.
+5. Next select the **"Root directory"** as the directory containing the tests.
 
     ![Select test directory](../images/backend_app_python_configure_test_select_directory.png)
 
@@ -84,7 +84,7 @@ You can view & edit the E2E test files (files with `*.spec.js` extension) in `En
 
 ## Java
 
-### Running the End to End Test (via [Test Explorer](https://code.visualstudio.com/docs/editor/testing#_automatic-test-discovery-in-test-explorer))
+### Running the End-to-End Test (via [Test Explorer](https://code.visualstudio.com/docs/editor/testing#_automatic-test-discovery-in-test-explorer))
 
 1. Click on the **"Testing"** icon on the left sidebar.
 

@@ -97,7 +97,7 @@ There are 2 ways to run the Unit Tests for the Frontend App:
 
 3. The application code can be found in `Backend App` directory.
 
-    - Can you figure out how we display the the To Do list?
+    - Can you figure out how we display the To Do list?
 
 4. The test code can be found in `Backend App` > `test`.
 
@@ -156,7 +156,7 @@ There are 2 ways to run the Unit Tests for the Frontend App:
 
 2. First, we need to configure the Python testing in VSCode.
 
-    Press `ctrl` + `shift` + `p` (windows) / `cmd` + `shift` + `p` (MacOS) to bring up the [Command Palette](https://code.visualstudio.com/api/ux-guidelines/command-palette).
+    Press `ctrl` + `shift` + `p` (windows) / `cmd` + `shift` + `p` (macOS) to bring up the [Command Palette](https://code.visualstudio.com/api/ux-guidelines/command-palette).
 
     Next, type: `pytest`
 
@@ -172,7 +172,7 @@ There are 2 ways to run the Unit Tests for the Frontend App:
 
     ![Select test framework](../images/backend_app_python_configure_test_select_test_framework.png)
 
-5. Next select the **Root directory"** as the directory containing the tests.
+5. Next select the **"Root directory"** as the directory containing the tests.
 
     ![Select test directory](../images/backend_app_python_configure_test_select_directory.png)
 
@@ -216,7 +216,7 @@ There are 2 ways to run the Unit Tests for the Frontend App:
 
 3. The application code can be found in `Backend App` directory.
 
-    - Can you figure out how we display the the To Do list?
+    - Can you figure out how we display the To Do list?
 
 4. The test code can be found in `Backend App` > `test_todos.py`.
 
@@ -234,7 +234,7 @@ There are 2 ways to run the Unit Tests for the Frontend App:
 
     ![Run Java app](../images/vscode_java_run_todolist.png)
 
-4. If you see this option, its due to Gradle importing all the depenedencies.
+4. If you see this option, its due to Gradle importing all the dependencies.
 
     ![Opening Java Project](../images/vscode_java_opening_java_project.png)
 
@@ -294,7 +294,7 @@ There are 2 ways to run the Unit Tests for the Frontend App:
 
 3. The application code can be found in `main` directory.
 
-    - Can you figure out how we display the the To Do list?
+    - Can you figure out how we display the To Do list?
 
 4. The test code can be found in `test` directory.
 

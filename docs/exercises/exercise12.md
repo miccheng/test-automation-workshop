@@ -1,4 +1,4 @@
-# Exercise 12: Updating the End to End Test
+# Exercise 12: Updating the End-to-End Test
 
 Now that we have a working frontend and backend implementation of **"Clear Completed"**, let's add some End-to-End test scenarios to complete the last user story:
 
@@ -12,7 +12,7 @@ Skip to the portion for your preferred programming language:
 
 ## JavaScript
 
-### Update the End to End Test
+### Update the End-to-End Test
 
 1. Open the **"End-to-End Tests"** workspace.
 
@@ -59,7 +59,7 @@ Skip to the portion for your preferred programming language:
 
     ![](../images/exercise12/js_e2e1.png)
 
-4. Click the **"Play"** button in the left gutter next to the test function to trigger this end to end test.
+4. Click the **"Play"** button in the left gutter next to the test function to trigger this end-to-end test.
 
     > **Note:** Make sure the **"Frontend App"** and **"Backend App"** are running before you run this test.
 
