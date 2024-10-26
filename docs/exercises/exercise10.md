@@ -55,7 +55,7 @@ Skip to the portion for your preferred programming language:
 
     ![Complete test code](../images/exercise10/js_2.png)
 
-5. The first time you run this, the test should fail (and its okay). This is because we have not written any production code yet.
+5. The first time you run this, the test should fail (and it's okay). This is because we have not written any production code yet.
 
     ![First failing test](../images/exercise10/js_3.png)
 
@@ -98,7 +98,7 @@ Skip to the portion for your preferred programming language:
 
     ![](../images/exercise10/js_8.png)
 
-5. To check that you did not introduce any regression bugs, its a good practice to run the entire test suite to ensure that all the tests are still passing.
+5. To check that you did not introduce any regression bugs, it's a good practice to run the entire test suite to ensure that all the tests are still passing.
 
     ![Full test suite run - along with the new feature test](../images/exercise10/js_9.png)
 
