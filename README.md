@@ -36,8 +36,8 @@ We will use a To Do List app to help illustrate the concepts. The To Do List app
 - Backend App
   - The To Do List backend is a REST API server built in 3 programming languages.
   - JavaScript:
-    - [ExpressJS](https://expressjs.com) for the web framework.
-    - [Sequalize](https://sequelize.org) for the ORM[^ORM].
+    - [Express.js](https://expressjs.com) for the web framework.
+    - [Sequelize](https://sequelize.org) for the ORM[^ORM].
     - [Vitest](https://vitest.dev) for the Unit Tests.
     - [SQLite3](https://www.sqlite.org) for the database.
   - Python:
@@ -51,7 +51,7 @@ We will use a To Do List app to help illustrate the concepts. The To Do List app
     - [Junit](https://junit.org/junit5) for the Unit Tests.
     - [H2](https://h2database.com) for the database.
 - End-to-End Tests
-  - This will automated a web browser and interact with the application like a normal user. This way, we have a repeatable and predictable way of verifying the features.
+  - This will automate a web browser and interact with the application like a normal user. This way, we have a repeatable and predictable way of verifying the features.
     - [Playwright](https://playwright.dev/) for the E2E testing framework. We can write tests in [JavaScript](https://playwright.dev/docs/intro), [Python](https://playwright.dev/python/docs/intro) or [Java](https://playwright.dev/java/docs/intro).
 
 ## Hands-on Lab Exercises
@@ -65,11 +65,11 @@ We will be using [GitHub Codespace](https://docs.github.com/en/codespaces/overvi
 - [Exercise 5: Intro to the Frontend App](./docs/exercises/exercise5.md)
 - [Exercise 6: Intro to the Backend App](./docs/exercises/exercise6.md)
 - [Exercise 7: Running the To Do List app](./docs/exercises/exercise7.md)
-- [Exercise 8: Intro to the Playwright End to End Test](./docs/exercises/exercise8.md)
+- [Exercise 8: Intro to the Playwright End-to-End Test](./docs/exercises/exercise8.md)
 - [Exercise 9: About the new feature](./docs/exercises/exercise9.md)
 - [Exercise 10: Updating the Backend](./docs/exercises/exercise10.md)
 - [Exercise 11: Updating the Frontend](./docs/exercises/exercise11.md)
-- [Exercise 12: Updating the End to End Test](./docs/exercises/exercise12.md)
+- [Exercise 12: Updating the End-to-End Test](./docs/exercises/exercise12.md)
 - [Exercise 13: Review the changes](./docs/exercises/exercise13.md)
 
 [^ORM]: Object Relational Mapping

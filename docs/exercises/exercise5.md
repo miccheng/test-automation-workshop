@@ -82,7 +82,7 @@ There are 2 ways to run the Unit Tests for the Frontend App:
 
 3. The application code can be found in `Frontend App` > `src`.
 
-    - Can you figure out how we display the the To Do list?
+    - Can you figure out how we display the To Do list?
     - Where are we making the network API call to the backend server?
 
 4. The test code can be found in `Frontend App` > `test`.
