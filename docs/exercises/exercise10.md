@@ -75,7 +75,7 @@ Skip to the portion for your preferred programming language:
          },
        });
 
-       res.json({ message: "Completed Task Deleted" });
+       res.json({ message: "Completed Tasks Deleted" });
      } catch (err) {
        res.status(500).json({ error: err.message });
      }
