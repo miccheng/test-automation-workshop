@@ -36,7 +36,9 @@ def delete_todo(db: Session, todo_id: int):
         db.commit()
     return db_todo
 
+
 def delete_completed_todos(db: Session):
-    stmt = delete(models.TodoItem).where(models.TodoItem.completed.__eq__(True))
+    stmt = delete(models.TodoItem).where(
+        models.TodoItem.completed.__eq__(True))
     db.execute(stmt)
     db.commit()
