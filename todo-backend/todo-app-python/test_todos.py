@@ -80,10 +80,12 @@ def test_delete_todo():
     assert response.status_code == 404
     assert response.json() == {"detail": "Todo not found"}
 
+
 def test_clear_completed_tasks():
     client.post("/todos/", json={"task": "Done task 1", "completed": True})
     client.post("/todos/", json={"task": "Done task 2", "completed": True})
-    client.post("/todos/", json={"task": "Procrastinating task", "completed": False})
+    client.post(
+        "/todos/", json={"task": "Procrastinating task", "completed": False})
 
     response = client.post("/todos/clear-completed")
     assert response.status_code == 200
