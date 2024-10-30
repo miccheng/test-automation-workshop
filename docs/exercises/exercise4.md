@@ -28,13 +28,14 @@ You can switch between Terminal sessions by selecting the process name at the pa
 
 Use these to navigate around the file system in the Devcontainer.
 
-Command | Task | Examples
-:------ | :--- | :-------
-`cd <folder_name>` | Change directory / navigate to a different directory. | `cd src`
-`cd ..` | Navigate the parent directory (one level up). | `cd ../test`
-`ls` | List the files and directories in the current folder | `ls`
-`ls -al` | Different formatting of the listing | `ls -al`
-`ls -al <folder_name>` | List the files in a different folder without navigating to it.  | `ls -al assets`
+| Command                | Task                                                            | Examples        |
+| :--------------------- | :-------------------------------------------------------------- | :-------------- |
+| `cd <folder_name>`     | Change directory / navigate to a different directory.           | `cd src`        |
+| `cd ..`                | Navigate the parent directory (one level up).                   | `cd ../test`    |
+| `ls`                   | List the files and directories in the current folder            | `ls`            |
+| `ls -al`               | Different formatting of the listing                             | `ls -al`        |
+| `ls -al <folder_name>` | List the files in a different folder without navigating to it.  | `ls -al assets` |
+| `pwd`                  | Print the current working directory (Present Working Directory) | `pwd`           |
 
 ## Project Explorer
 
