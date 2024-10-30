@@ -19,4 +19,6 @@ Then I should only see "Undone" Tasks on the To Do list.
 - [ ] `AC-3`: When we click on the **"Clear Completed" button**, an API call should be triggered to the Backend API (`POST /todos/clear-completed`) in `AC-1` above.
 - [ ] `AC-4`: Update the UI with the updated To Do List.
 
+> **Note:** `AC` stands for "Acceptance Criteria".
+
 [Next Exercise](./exercise10.md)
