@@ -8,6 +8,13 @@
   ],
   "postCreateCommand": "cd ./todo-frontend && npm install",
   "customizations": {
+    "settings": {
+      "editor.formatOnSave": true,
+      "editor.tabSize": 2,
+      "editor.renderWhitespace": "all",
+      "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+      "[vue]": {"editor.defaultFormatter": "esbenp.prettier-vscode"}
+    },
     "vscode": {
       "extensions": [
         "ms-playwright.playwright",
@@ -16,6 +23,7 @@
         "Vue.volar",
         "oderwat.indent-rainbow",
         "vitest.explorer",
+        "esbenp.prettier-vscode",
         "vmware.vscode-boot-dev-pack"
       ]
     }

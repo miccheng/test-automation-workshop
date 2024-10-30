@@ -8,6 +8,13 @@
   ],
   "postCreateCommand": "cd ./todo-frontend && npm install && cd ../todo-backend/todo-app-python && make install-dependencies && cd ../../e2e/py && make install-dependencies",
   "customizations": {
+    "settings": {
+      "editor.formatOnSave": true,
+      "editor.tabSize": 2,
+      "editor.renderWhitespace": "all",
+      "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+      "[vue]": {"editor.defaultFormatter": "esbenp.prettier-vscode"}
+    },
     "vscode": {
       "extensions": [
         "ms-playwright.playwright",
@@ -15,7 +22,8 @@
         "humao.rest-client",
         "Vue.volar",
         "oderwat.indent-rainbow",
-        "vitest.explorer"
+        "vitest.explorer",
+        "esbenp.prettier-vscode"
       ]
     }
   }
