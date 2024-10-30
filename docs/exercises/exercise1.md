@@ -9,6 +9,10 @@
 
    ![Fork form](../images/fork_form.png)
 
-4. Click on **"Create fork"** to fork the repository to your organization / personal space.
+4. Remove the tick on the **"Copy the `main` branch only"** checkbox to copy all the branches.
+
+   ![Fork form](../images/form_all_branches.png)
+
+5. Click on **"Create fork"** to fork the repository to your organization / personal space.
 
 [Next Exercise](./exercise2.md)
