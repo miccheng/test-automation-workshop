@@ -73,7 +73,7 @@ class TodoAppTest {
     locator = page.locator(".todo-item span");
     assertThat(locator).hasClass("completed");
   }
-
+  
   @Test
   @Order(5)
   void add_multiple_todo_items(Page page) {
@@ -84,6 +84,32 @@ class TodoAppTest {
     addItem(page, "Buy eggs");
     locator = page.locator(".todo-item:nth-child(2)");
     assertThat(locator).containsText("Buy eggs");
+  }
+  
+  @Test
+  @Order(6)
+  void check_mark_completed(Page page) {
+    page.navigate(TEST_HOST);
+    
+    addItem(page, "Buy milk");
+    var firstItem = page.locator(".todo-item:nth-child(1)");
+    assertThat(firstItem).containsText("Buy milk");
+    
+    addItem(page, "Buy eggs");
+    var secondItem = page.locator(".todo-item:nth-child(2)");
+    assertThat(secondItem).containsText("Buy eggs");
+    secondItem.getByRole(AriaRole.CHECKBOX).click();
+
+    var secondItemStatus = secondItem.locator("span");
+    assertThat(secondItemStatus).hasClass("completed");
+
+    var clearBtn = page.locator(".clearCompletedBtn");
+    assertThat(clearBtn).isVisible();
+
+    clearBtn.click();
+
+    assertThat(secondItem).not().isVisible();
+    assertThat(firstItem).isVisible();
   }
 
   private void addItem(Page page, String item) {
