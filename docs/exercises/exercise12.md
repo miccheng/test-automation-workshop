@@ -105,6 +105,42 @@ Skip to the portion for your preferred programming language:
 
 ### Updating the Code
 
-TODO
+1. Open the **"End-to-End Tests"** workspace.
+
+2. Open the E2E test file: `src/test/java/com/tddworkshops/todolist/TodoAppTest.java`.
+
+3. Add this code to the end of the file:
+
+   ```java
+   @Test
+   @Order(6)
+   void check_mark_completed(Page page) {
+      page.navigate(TEST_HOST);
+
+      addItem(page, "Buy milk");
+      var firstItem = page.locator(".todo-item:nth-child(1)");
+      assertThat(firstItem).containsText("Buy milk");
+
+      addItem(page, "Buy eggs");
+      var secondItem = page.locator(".todo-item:nth-child(2)");
+      assertThat(secondItem).containsText("Buy eggs");
+      secondItem.getByRole(AriaRole.CHECKBOX).click();
+
+      var secondItemStatus = secondItem.locator("span");
+      assertThat(secondItemStatus).hasClass("completed");
+
+      var clearBtn = page.locator(".clearCompletedBtn");
+      assertThat(clearBtn).isVisible();
+
+      clearBtn.click();
+
+      assertThat(secondItem).not().isVisible();
+      assertThat(firstItem).isVisible();
+   }
+   ```
+
+4. Click the **"Play"** button in the left gutter next to the test function to trigger this end-to-end test.
+
+   > **Note:** Make sure the **"Frontend App"** and **"Backend App"** are running before you run this test.
 
 [Next Exercise](./exercise13.md)
