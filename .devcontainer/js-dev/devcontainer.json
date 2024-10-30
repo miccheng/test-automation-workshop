@@ -8,14 +8,14 @@
   ],
   "postCreateCommand": "cd ./todo-frontend && npm install && cd ../todo-backend/todo-app-js && npm install && cd ../../e2e/js && npm install",
   "customizations": {
-    "settings": {
-      "editor.formatOnSave": true,
-      "editor.tabSize": 2,
-      "editor.renderWhitespace": "all",
-      "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
-      "[vue]": {"editor.defaultFormatter": "esbenp.prettier-vscode"}
-    },
     "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "editor.renderWhitespace": "all",
+        "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+        "[vue]": {"editor.defaultFormatter": "esbenp.prettier-vscode"}
+      },
       "extensions": [
         "ms-playwright.playwright",
         "MS-vsliveshare.vsliveshare",
