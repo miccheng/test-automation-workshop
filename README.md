@@ -2,11 +2,19 @@
 
 ## Background
 
-This is the material for my workshop at [GovTech STACK Conference 2024](https://govtechstack.sg).
+This is the material for my workshop at [GovTech STACK Conference 2024](https://govtechstack.sg) ([Slides](https://docs.google.com/presentation/d/1AQDbr3-gdXzhQ3oHowwQEA2JtSHNrZ5s/edit?usp=sharing&ouid=101651439519857751992&rtpof=true&sd=true)).
 
 This workshop will take folks on a learning adventure of how software engineers in GovTech use Automated Testing in building high-quality software products for public good. Attendees will be introduced to the different layers of the Testing Pyramid and the tools that software engineers in GovTech use to support that layer of automated testing.
 
 Attendees will be given a number of self-paced hands-on labs to have a taster on the different kind of testing tools available. Through these, participants will learn about different kinds of test automation tools used in software engineering. Specifically for full-stack web development.
+
+## Pre-requisites (for attendees)
+
+- Basic understanding of programming concepts.
+- Familiarity with JavaScript, Python or Java programming languages.
+- Familiarity with Git and GitHub (you will need a [GitHub](https://github.com/) user account).
+- Familiarity with web development concepts.
+- Familiarity with REST API concepts.
 
 ## Concept
 
