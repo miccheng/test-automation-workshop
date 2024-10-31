@@ -13,3 +13,4 @@
 - [Exercise 11: Updating the Frontend](./exercises/exercise11.md)
 - [Exercise 12: Updating the End-to-End Test](./exercises/exercise12.md)
 - [Exercise 13: Review the changes](./exercises/exercise13.md)
+- [Exercise 14: Bonus Exercises](./exercises/exercise14.md)

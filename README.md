@@ -79,6 +79,7 @@ We will be using [GitHub Codespace](https://docs.github.com/en/codespaces/overvi
 - [Exercise 11: Updating the Frontend](./docs/exercises/exercise11.md)
 - [Exercise 12: Updating the End-to-End Test](./docs/exercises/exercise12.md)
 - [Exercise 13: Review the changes](./docs/exercises/exercise13.md)
+- [Exercise 14: Bonus Exercises](./docs/exercises/exercise14.md)
 
 [^ORM]: Object Relational Mapping
 [^IDE]: Integrated Development Environment
