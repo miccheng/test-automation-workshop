@@ -205,7 +205,7 @@ There are 2 ways to run the Unit Tests for the Frontend App:
 
 3. In the new Terminal window, type: `make test`
 
-   ![Run the backend test](../images/vscode_terminal_backend_npm_run_test.png)
+   ![Run the backend test](../images/backend_app_python_make_test.png)
 
 4. You should see this display if all the tests are passing:
 
