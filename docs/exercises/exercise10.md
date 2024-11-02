@@ -49,11 +49,13 @@ Skip to the portion for your preferred programming language:
 
    > **Note:** Remember to save the file.
 
-4. Let's run the test by pressing on the "Play" button tha appears in the left gutter next to your test function.
+4. Ensure that you do not have an active backend server running. If you are unsure, please check the PORTS tab in vscode ![ports in vscode](../images/exercise10/js_10.png) or else vitest will complain in your terminal about unhandled error.
+
+5. Let's run the test by pressing on the "Play" button tha appears in the left gutter next to your test function.
 
    ![Complete test code](../images/exercise10/js_2.png)
 
-5. The first time you run this, the test should fail (and it's okay). This is because we have not written any production code yet.
+6. The first time you run this, the test should fail (and it's okay). This is because we have not written any production code yet.
 
    ![First failing test](../images/exercise10/js_3.png)
 
@@ -61,7 +63,7 @@ Skip to the portion for your preferred programming language:
 
 ### Updating the Code
 
-1. Open the file: `index.js`
+1. Open the file in the backend directory for todo-app-js: `index.js`
 
 2. Near the bottom of the file (after line 75), add this new function:
 
@@ -83,6 +85,8 @@ Skip to the portion for your preferred programming language:
    ```
 
    > **Note:** Remember to save the file.
+
+   The code above interacts with the database via Sequelize to destroy tasks that are marked completed by the user where the task properties on the database reflect the completion via a boolean. If the specific database record is able to be successfully removed, a HTTP JSON response of `{ message: "Completed Tasks Deleted" }` is then reflected on the HTTP client. If there is a failed removal and an error is found, a JSON response status of 500 with the specific caught error will be reflected in the HTTP response body.
 
 3. You can now go back to the test file (`test/todoRoutes.test.js`) and rerun the test by clicking on the red "X" icon in the left gutter next to your test function.
 
@@ -112,7 +116,7 @@ Skip to the portion for your preferred programming language:
 
    ![Send Request](../images/exercise10/http_try.png)
 
-5. When you try to get the list again, there should be no more completed task in the list.
+5. When you try to get the list again, there should be no more completed task in the list. Send a GET request to the endpoint `/todos`
 
 ## Python
 
