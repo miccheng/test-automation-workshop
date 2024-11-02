@@ -16,6 +16,11 @@ Attendees will be given a number of self-paced hands-on labs to have a taster on
 - Familiarity with web development concepts.
 - Familiarity with REST API concepts.
 
+### Local machine requirements
+
+- VsCode
+- GitHub Codespaces extension.
+
 ### Dev Containers
 
 If you'd like to setup the project with dev containers on your vscode ide, please install the vscode extension called Dev Containers from the [VS code marketplace](./docs/images/dev_containers_marketplace_extension.png)
