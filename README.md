@@ -83,7 +83,7 @@ We will be using [GitHub Codespace](https://docs.github.com/en/codespaces/overvi
 
 ## Coding with AI
 
-- [How we created the sample application using ChatGPT and GitHub Copilot](./docs/coding_with_ai.md)
+- [How we created the sample application using AI tools.](./docs/coding_with_ai.md)
 
 [^ORM]: Object Relational Mapping
 [^IDE]: Integrated Development Environment
