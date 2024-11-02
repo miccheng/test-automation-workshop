@@ -18,7 +18,7 @@ Attendees will be given a number of self-paced hands-on labs to have a taster on
 
 ### Dev Containers
 
-If you'd like to setup the project with dev containers on your vscode ide, please install the vscode extension called Dev Containers from the [marketplace](./docs/images/dev_containers_marketplace_extension.png)
+If you'd like to setup the project with dev containers on your vscode ide, please install the vscode extension called Dev Containers from the [VS code marketplace](./docs/images/dev_containers_marketplace_extension.png)
 
 If you'd like to use Dev Containers instead of codespaces, please follow the instructions [here]()
 
