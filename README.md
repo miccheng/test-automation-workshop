@@ -81,6 +81,10 @@ We will be using [GitHub Codespace](https://docs.github.com/en/codespaces/overvi
 - [Exercise 13: Review the changes](./docs/exercises/exercise13.md)
 - [Exercise 14: Bonus Exercises](./docs/exercises/exercise14.md)
 
+## Coding with AI
+
+- [How we created the sample application using ChatGPT and GitHub Copilot](./docs/coding_with_ai.md)
+
 [^ORM]: Object Relational Mapping
 [^IDE]: Integrated Development Environment
 [^SPA]: Single Page Application
