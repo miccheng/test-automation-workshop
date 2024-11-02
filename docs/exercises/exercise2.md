@@ -1,6 +1,8 @@
 # Exercise 2: Start a Codespace
 
-1. In your forked repository page, click on **"Code"**, click on the ellipsis (3 dots) button and select **"New with Options"**.
+> **WARNING**: Please follow through the instructions step by step very **carefully** and not press buttons that are not mentioned inside this doc.
+
+1. In your forked repository page, click on **"Code"**, click on the ellipsis (3 dots) button and select the "..." then select **"New with Options"**.
 
    ![Create a new Codespace](../images/codespace_new_with_options.png)
 
@@ -18,7 +20,7 @@
 
 5. Click on **"Create codespace"**.
 
-6. Your Codespace will take a few minutes to be setup.
+6. Your Codespace will take a few minutes to be setup. It will open a new browser tab.
 
    ![Setting Up](../images/codespace_setting_up.png)
 
