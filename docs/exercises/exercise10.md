@@ -51,7 +51,7 @@ Skip to the portion for your preferred programming language:
 
 4. Ensure that you do not have an active backend server running. If you are unsure, please check the PORTS tab in vscode ![ports in vscode](../images/exercise10/js_10.png) or else vitest will complain in your terminal about unhandled error.
 
-5. Let's run the test by pressing on the "Play" button tha appears in the left gutter next to your test function.
+5. Let's run the test by pressing on the "Play" button that appears in the left gutter next to your test function.
 
    ![Complete test code](../images/exercise10/js_2.png)
 
