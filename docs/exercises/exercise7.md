@@ -6,6 +6,6 @@
 
 3. You should be able to interact with your To Do List app now.
 
-   ![Walk through](../images/todolist-app-walkthru.gif)
+![Walk through](../images/todolist-app-walkthru.gif)
 
 [Next Exercise](./exercise8.md)
