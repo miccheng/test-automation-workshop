@@ -99,7 +99,7 @@ Skip to the portion for your preferred programming language:
 
 4. Click the **"Play"** button in the left gutter next to the test function to trigger this end-to-end test.
 
-   > **Note:** Make sure the **"Frontend App"** and **"Backend App"** are running before you run this test.
+   > **Note:** Make sure the **"Frontend App"** and **"Backend App"** are running before you run this test. Restart the backend application and run the **whole** test suite.
 
 ## Java
 

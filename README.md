@@ -16,6 +16,17 @@ Attendees will be given a number of self-paced hands-on labs to have a taster on
 - Familiarity with web development concepts.
 - Familiarity with REST API concepts.
 
+### Local machine requirements
+
+- VsCode
+- GitHub Codespaces extension.
+
+### Dev Containers
+
+If you'd like to setup the project with dev containers on your vscode ide, please install the vscode extension called Dev Containers from the [VS code marketplace](./docs/images/dev_containers_marketplace_extension.png)
+
+To prevent workspace from crashing due to time sensitive periods for codespaces on your browser, you can use Dev Containers instead of codespaces, please follow the instructions [here](./docs/setup/dev_container_setup.md)
+
 ## Concept
 
 Through this workshop, I aim to introduce the different testing tools used by modern full-stack software engineers in developing web applications.
