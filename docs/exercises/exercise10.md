@@ -63,7 +63,7 @@ Skip to the portion for your preferred programming language:
 
 ### Updating the Code
 
-1. Open the file in the backend directory for todo-app-js: `index.js`
+1. In the **"Backend App"** workspace, open the file: `index.js`
 
 2. Near the bottom of the file (after line 75), add this new function:
 
