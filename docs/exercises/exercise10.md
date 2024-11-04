@@ -235,10 +235,10 @@ With the Java implementation, we have quite a number of files to update. We will
 
 1. In the **"Backend App"** workspace, open the test file: `src/main/java/com/tddworkshops/todolist/repository/TodoRepository.java`
 
-2. In the interfacce class, add this line:
+2. In the interface class, add this line in the class:
 
    ```java
-   void deleteCompleted();
+   void deleteByCompleted(boolean completed);
    ```
 
    This will add the method to delete all completed To Do items.
@@ -332,7 +332,7 @@ With the Java implementation, we have quite a number of files to update. We will
 
    > **Note:** Remember to save the file.
 
-3. Next, we update our Intgeration test to check this behavior. Open the file: `src/test/java/com/tddworkshops/todolist/TodolistApplicationTests.java`
+3. Next, we update our Integration test to check this behavior. Open the file: `src/test/java/com/tddworkshops/todolist/TodolistApplicationTests.java`
 
 4. Add these 2 new code block to the `test_create_todo()` test.
 
