@@ -19,6 +19,7 @@
         @toggle-complete="toggleComplete"
         @edit-todo="setEditMode"
         @delete-todo="deleteTask" />
+      <TodoActions :hasCompleted="hasCompleted" @clear-completed="clearCompleted"></TodoActions>
     </div>
   </div>
 </template>
@@ -27,6 +28,7 @@
 import axios from 'axios';
 import TodoItem from './components/TodoItem.vue';
 import TodoForm from './components/TodoForm.vue';
+import TodoActions from "./components/TodoActions.vue"
 
 const viteApiHost = import.meta.env.VITE_API_HOST;
 const apiHost = viteApiHost && viteApiHost !== 'https://-3000.' ? viteApiHost : 'http://localhost:3000';
@@ -36,6 +38,7 @@ export default {
   components: {
     TodoItem,
     TodoForm,
+    TodoActions,
   },
   data() {
     return {
@@ -50,6 +53,11 @@ export default {
   async mounted() {
     this.fetchTodos();
   },
+  computed: {
+     hasCompleted() {
+       return this.todos.items.filter((item) => item.completed).length > 0
+     }
+   },
   methods: {
     async fetchTodos() {
       this.loading = true;
@@ -104,6 +112,14 @@ export default {
     cancelEdit() {
       this.editMode = false;
       this.taskToEdit = null;
+    },
+    async clearCompleted() {
+      try {
+        await axios.post(`${apiHost}/todos/clear-completed`);
+        this.todos.items = this.todos.items.filter(todo => !todo.completed);
+      } catch (error) {
+        console.error("Error clearing complete:", error);
+      }
     }
   }
 }

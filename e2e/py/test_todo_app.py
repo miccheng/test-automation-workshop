@@ -67,3 +67,25 @@ def test_add_multiple_todo_items(page):
     addItem(page, 'Buy eggs')
     locator = page.locator('.todo-item:nth-child(2) span')
     expect(locator).to_have_text('Buy eggs')
+
+def test_clear_completed_todo_items(page):
+    page.goto(testHost)
+
+    addItem(page, 'Buy milk')
+    firstItemText = page.locator('.todo-item:nth-child(1) span')
+    expect(firstItemText).to_have_text('Buy milk')
+
+    addItem(page, 'Buy eggs')
+    secondItem = page.locator('.todo-item:nth-child(2)')
+    secondItemText = page.locator('.todo-item:nth-child(2) span')
+    expect(secondItemText).to_have_text('Buy eggs')
+
+    secondItem.get_by_role('checkbox').click()
+    expect(secondItemText).to_have_class('completed')
+
+    clearBtn = page.locator('.clearCompletedBtn')
+    expect(clearBtn).to_be_visible()
+
+    clearBtn.click()
+    expect(secondItem).not_to_be_visible()
+    expect(firstItemText).to_be_visible()

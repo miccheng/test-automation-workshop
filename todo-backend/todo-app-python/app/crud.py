@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session
 from . import models, schemas
+from sqlalchemy import delete
 
 
 def get_todos(db: Session, skip: int = 0, limit: int = 10):
@@ -34,3 +35,10 @@ def delete_todo(db: Session, todo_id: int):
         db.delete(db_todo)
         db.commit()
     return db_todo
+
+
+def delete_completed_todos(db: Session):
+    stmt = delete(models.TodoItem).where(
+        models.TodoItem.completed.__eq__(True))
+    db.execute(stmt)
+    db.commit()

@@ -79,3 +79,20 @@ def test_delete_todo():
     response = client.get(f"/todos/{todo_id}")
     assert response.status_code == 404
     assert response.json() == {"detail": "Todo not found"}
+
+
+def test_clear_completed_tasks():
+    client.post("/todos/", json={"task": "Done task 1", "completed": True})
+    client.post("/todos/", json={"task": "Done task 2", "completed": True})
+    client.post(
+        "/todos/", json={"task": "Procrastinating task", "completed": False})
+
+    response = client.post("/todos/clear-completed")
+    assert response.status_code == 200
+    assert response.json() == {"message": "Completed Tasks Deleted"}
+
+    response = client.get("/todos")
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data) == 1
+    assert data[0]["task"] == "Procrastinating task"
