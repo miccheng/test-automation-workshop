@@ -6,9 +6,8 @@ Let's work on the first user story:
 
 Skip to the portion for your preferred programming language:
 
-- [JavaScript](#javascript)
-- [Python](#python)
-- [Java](#java)
+<details>
+<summary>JavaScript</summary>
 
 ## JavaScript
 
@@ -118,6 +117,11 @@ Skip to the portion for your preferred programming language:
 
 5. When you try to get the list again, there should be no more completed task in the list. Send a GET request to the endpoint `/todos`
 
+</details>
+
+<details>
+<summary>Python</summary>
+
 ## Python
 
 ### Updating the Unit Test
@@ -226,6 +230,11 @@ Skip to the portion for your preferred programming language:
    ![Send Request](../images/exercise10/http_try.png)
 
 5. When you try to get the list again, there should be no more completed task in the list.
+
+</details>
+
+<details>
+<summary>Java</summary>
 
 ## Java
 
@@ -425,5 +434,7 @@ With the Java implementation, we have quite a number of files to update. We will
 9. Run all the tests to ensure that everything is still working as expected.
 
    ![Run all tests](../images/exercise10/java_6.png)
+
+</details>
 
 [Next Exercise](./exercise11.md)

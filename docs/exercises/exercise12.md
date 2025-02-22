@@ -6,9 +6,8 @@ Now that we have a working frontend and backend implementation of **"Clear Compl
 
 Skip to the portion for your preferred programming language:
 
-- [JavaScript](#javascript)
-- [Python](#python)
-- [Java](#java)
+<details>
+<summary>JavaScript</summary>
 
 ## JavaScript
 
@@ -63,6 +62,11 @@ Skip to the portion for your preferred programming language:
 
    > **Note:** Make sure the **"Frontend App"** and **"Backend App"** are running before you run this test.
 
+</details>
+
+<details>
+<summary>Python</summary>
+
 ## Python
 
 ### Updating the Code
@@ -100,6 +104,11 @@ Skip to the portion for your preferred programming language:
 4. Click the **"Play"** button in the left gutter next to the test function to trigger this end-to-end test.
 
    > **Note:** Make sure the **"Frontend App"** and **"Backend App"** are running before you run this test. Restart the backend application and run the **whole** test suite.
+
+</details>
+
+<details>
+<summary>Java</summary>
 
 ## Java
 
@@ -142,5 +151,7 @@ Skip to the portion for your preferred programming language:
 4. Click the **"Play"** button in the left gutter next to the test function to trigger this end-to-end test.
 
    > **Note:** Make sure the **"Frontend App"** and **"Backend App"** are running before you run this test.
+
+</details>
 
 [Next Exercise](./exercise13.md)
