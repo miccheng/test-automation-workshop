@@ -6,6 +6,9 @@ Skip to the portion for your preferred programming language:
 - [Python](#python)
 - [Java](#java)
 
+<details>
+<summary>JavaScript</summary>
+
 ## JavaScript
 
 ### Starting the App
@@ -107,6 +110,11 @@ There are 2 ways to run the Unit Tests for the **"Backend App"**:
 4. The test code can be found in `Backend App` > `test`.
 
    - Can you figure out what the test code mean?
+
+</details>
+
+<details>
+<summary>Python</summary>
 
 ## Python
 
@@ -227,6 +235,11 @@ There are 2 ways to run the Unit Tests for the Frontend App:
 
    - Can you figure out what the test code mean?
 
+</details>
+
+<details>
+<summary>Java</summary>
+
 ## Java
 
 ### Starting the App
@@ -303,5 +316,7 @@ There are 2 ways to run the Unit Tests for the Frontend App:
 4. The test code can be found in `test` directory.
 
    - Can you figure out what the test code mean?
+
+</details>
 
 [Next Exercise](./exercise7.md)
