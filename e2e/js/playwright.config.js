@@ -83,7 +83,7 @@ module.exports = defineConfig({
     {
       command: "npm run dev",
       cwd: "../../todo-backend/todo-app-js",
-      url: "http://localhost:3000",
+      url: "http://localhost:3000/todos",
       reuseExistingServer: !process.env.CI,
       timeout: 60000,
     },
