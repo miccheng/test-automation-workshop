@@ -3,6 +3,7 @@ stages:
   - e2e
 
 default:
+  # Configs here are specific to SHIP GitLab CI.
   tags:
     - cstack
     - no_root
@@ -92,6 +93,3 @@ test-e2e-js:
           - e2e/js/package-lock.json
       paths:
         - e2e/js/node_modules
-    
-
-# - cd ./todo-frontend && cd ../todo-backend/todo-app-js && npm install && cd ../../e2e/js && npm install
