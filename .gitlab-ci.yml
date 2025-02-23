@@ -13,21 +13,25 @@ test-backend-js:
   stage: test
   image: node:20-alpine
   before_script:
-    - cd ./todo-backend/todo-app-js && npm install 
+    - cd ./todo-backend/todo-app-js
+    - npm install 
   script:
     - npm run test
 
 test-backend-python:
   stage: test
   image: python:3-slim
+  variables:
+    PATH: "/tmp/.local/bin:$PATH"
   before_script:
-    - cd ./todo-backend/todo-app-python && pip install -r requirements.txt
+    - cd ./todo-backend/todo-app-python
+    - pip install -r requirements.txt
   script:
     - pytest --disable-warnings
 
 test-backend-java:
   stage: test
-  image: mcr.microsoft.com/openjdk/jdk:21-distroless
+  image: mcr.microsoft.com/openjdk/jdk:21-ubuntu
   before_script:
     - cd ./todo-backend/todo-app-java
   script:
