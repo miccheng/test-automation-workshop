@@ -26,13 +26,11 @@ test-backend-js:
 test-backend-python:
   stage: test
   image: python:3-slim
-  variables:
-    PATH: "/tmp/.local/bin:$PATH"
   before_script:
     - cd ./todo-backend/todo-app-python
     - pip install -r requirements.txt
   script:
-    - pytest --disable-warnings
+    - /tmp/.local/bin/pytest --disable-warnings
 
 test-backend-java:
   stage: test
