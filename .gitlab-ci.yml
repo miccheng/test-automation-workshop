@@ -43,6 +43,7 @@ test-backend-java:
 
 test-e2e-js:
   stage: e2e
+  image: mcr.microsoft.com/playwright:v1.47.2-jammy
   needs:
     - test-frontend
     - test-backend-js
