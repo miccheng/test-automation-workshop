@@ -44,6 +44,12 @@ test-backend-python:
     - pip install -r requirements.txt
   script:
     - /tmp/.local/bin/pytest --disable-warnings
+  cache:
+    key:
+      files:
+        - todo-backend/todo-app-python/requirements.txt
+    paths:
+      - /tmp/.local/bin
 
 test-backend-java:
   stage: test
