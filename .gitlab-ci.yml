@@ -1,6 +1,11 @@
 stages:
   - test
 
+default:
+  tags:
+    - cstack
+    - no_root
+
 test-frontend:
   stage: test
   image: node:20-alpine
