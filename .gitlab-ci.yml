@@ -1,5 +1,6 @@
 stages:
   - test
+  - e2e
 
 default:
   tags:
@@ -40,13 +41,14 @@ test-backend-java:
   script:
     - ./gradlew test
 
-
-
-# test-e2e-js:
-#   stage: test
-#   before_script:
-#     - cd ./todo-frontend && cd ../todo-backend/todo-app-js && npm install && cd ../../e2e/js && npm install
-#   script:
-#     - npm run test
+test-e2e-js:
+  stage: e2e
+  needs:
+    - test-frontend
+    - test-backend-js
+  before_script:
+    - cd ./todo-frontend && npm install && cd ../todo-backend/todo-app-js && npm install && cd ../../e2e/js && npm install
+  script:
+    - npm run test
 
 # - cd ./todo-frontend && cd ../todo-backend/todo-app-js && npm install && cd ../../e2e/js && npm install
