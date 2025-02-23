@@ -62,7 +62,7 @@ test-e2e-js:
   before_script:
     - cd ./todo-frontend && npm install && cd ../todo-backend/todo-app-js && npm install && cd ../../e2e/js && npm install
   script:
-    - npm run test
+    - npm run e2e
   cache:
     - key:
         files:
