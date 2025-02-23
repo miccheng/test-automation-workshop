@@ -70,6 +70,8 @@ test-e2e-js:
   needs:
     - test-frontend
     - test-backend-js
+  variables:
+    DEBUG: pw:webserver
   before_script:
     - cd ./todo-frontend && npm install && cd ../todo-backend/todo-app-js && npm install && cd ../../e2e/js && npm install
   script:
