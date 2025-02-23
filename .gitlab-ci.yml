@@ -56,8 +56,13 @@ test-backend-java:
   image: mcr.microsoft.com/openjdk/jdk:21-ubuntu
   before_script:
     - cd ./todo-backend/todo-app-java
+    - export GRADLE_USER_HOME=`pwd`/.gradle
   script:
     - ./gradlew test
+  cache:
+    paths:
+      - todo-backend/todo-app-java/.gradle/wrapper
+      - todo-backend/todo-app-java/.gradle/caches
 
 test-e2e-js:
   stage: e2e
